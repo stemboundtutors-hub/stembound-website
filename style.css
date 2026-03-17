@@ -1,5 +1,5 @@
 /* =====================
-   STICKY FOOTER + HEADER FIX
+   STICKY FOOTER + HEADER + HERO FIX
 ===================== */
 body {
     display: flex;
@@ -57,12 +57,14 @@ nav a:hover {
    HERO SECTION
 ===================== */
 .hero {
-    height: calc(100vh - 100px); /* subtract header height */
+    min-height: calc(100vh - 100px); /* fills screen minus header */
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center; /* vertical centering */
     align-items: center;
     text-align: center;
+    padding-top: 50px; /* ensures title isn't cut off */
+    padding-bottom: 50px; /* breathing room on shorter screens */
     background: linear-gradient(135deg, #0a0f1c, #1a2a6c, #00d4ff);
 }
 
@@ -98,7 +100,7 @@ nav a:hover {
 .container {
     max-width: 1100px;
     margin: auto;
-    padding: 80px 20px;
+    padding: 80px 20px; /* spacing inside content */
 }
 
 /* optional spacing after hero */
@@ -140,5 +142,5 @@ footer {
     padding: 30px;
     background: #05080f;
     opacity: 0.7;
-    margin-top: auto; /* sticks footer to bottom if page is short */
+    margin-top: auto; /* sticks footer to bottom if content is short */
 }
