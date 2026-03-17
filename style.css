@@ -4,10 +4,11 @@
     box-sizing:border-box;
 }
 
-body{
-    font-family:'Poppins', sans-serif;
-    background:#0a0f1c;
-    color:white;
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #0f172a;
+    color: white;
 }
 
 /* NAVBAR */
