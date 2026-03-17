@@ -1,47 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Founders | STEMBound</title>
+  <title>STEMBound</title>
   <link rel="icon" href="stembound-logo.png">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    /* Flex layout to push footer to bottom */
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .container {
+      flex: 1;
+      max-width: 1100px;
+      margin: auto;
+      padding: 80px 20px;
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
-  <div class="navbar">
-    <a href="index.html" class="logo">STEMBound</a>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="events.html">Events</a>
-      <a href="join.html">Join</a>
-      <a href="chapters.html">Chapters</a>
-      <a href="founders.html">Founders</a>
-      <a href="board.html">Board</a>
-    </nav>
-  </div>
-</header>
+  <header>
+    <div class="navbar">
+      <a href="index.html" class="logo">STEMBound</a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="events.html">Events</a>
+        <a href="join.html">Join</a>
+        <a href="chapters.html">Chapters</a>
+        <a href="founders.html" class="active">Founders</a>
+        <a href="board.html">Board</a>
+      </nav>
+    </div>
+  </header>
 
-<section class="container">
-  <h2 class="section-title">Our Founders</h2>
-  <p>Meet the co-founders who started STEMBound:</p>
+  <section class="hero">
+    <h1>Founders</h1>
+    <p>Meet the co-founders of STEMBound and learn about their vision for the club.</p>
+  </section>
 
-  <div class="cards">
-    <div class="card"><h3>Prisha Srivastava</h3><p>Co-founder. A brief bio goes here. (You can edit this later.)</p></div>
-    <div class="card"><h3>Nikita Ramesh</h3><p>Co-founder. A brief bio goes here. (You can edit this later.)</p></div>
-  </div>
-</section>
+  <section class="container">
+    <div class="cards">
+      <div class="card">
+        <h3>Prisha Srivastava</h3>
+        <p>Co-founder of STEMBound. [Add bio here]</p>
+      </div>
+      <div class="card">
+        <h3>Nikita Ramesh</h3>
+        <p>Co-founder of STEMBound. [Add bio here]</p>
+      </div>
+    </div>
+  </section>
 
-<footer>
-  <p>© 2026 STEMBound Club</p>
-</footer>
+  <footer>
+    <p>© 2026 STEMBound Club</p>
+  </footer>
 
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
