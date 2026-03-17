@@ -1,6 +1,4 @@
-/* =====================
-   STICKY FOOTER + HEADER + HERO FIX
-===================== */
+
 body {
     display: flex;
     flex-direction: column;
@@ -15,9 +13,7 @@ main {
     flex: 1; /* fills remaining space between header and footer */
 }
 
-/* =====================
-   NAVBAR
-===================== */
+
 header {
     position: fixed;
     width: 100%;
@@ -53,9 +49,7 @@ nav a:hover {
     color: #00d4ff;
 }
 
-/* =====================
-   HERO SECTION
-===================== */
+
 .hero {
     min-height: calc(100vh - 100px); /* fills screen minus header */
     display: flex;
@@ -94,9 +88,7 @@ nav a:hover {
     background: white;
 }
 
-/* =====================
-   CONTENT & CARDS
-===================== */
+
 .container {
     max-width: 1100px;
     margin: auto;
@@ -134,9 +126,7 @@ main .container:first-of-type {
     box-shadow: 0 10px 30px rgba(0,212,255,0.3);
 }
 
-/* =====================
-   FOOTER
-===================== */
+
 footer {
     text-align: center;
     padding: 30px;
