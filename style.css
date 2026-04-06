@@ -1,8 +1,8 @@
-
+/* General Layout */
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* full viewport height */
+    min-height: 100vh;
     margin: 0;
     font-family: 'Poppins', sans-serif;
     background-color: #0f172a;
@@ -10,15 +10,15 @@ body {
 }
 
 main {
-    flex: 1; /* fills remaining space between header and footer */
+    flex: 1;
+    padding-top: 80px; /* Offset for fixed header */
 }
-
 
 header {
     position: fixed;
     width: 100%;
     top: 0;
-    background: rgba(0,0,0,0.6);
+    background: rgba(0,0,0,0.8);
     backdrop-filter: blur(10px);
     z-index: 1000;
 }
@@ -27,110 +27,134 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1100px;
+    max-width: 1200px;
     margin: auto;
-    padding: 20px;
+    padding: 15px 20px;
 }
 
 .logo {
     font-size: 24px;
     font-weight: 600;
+    text-decoration: none;
+    color: white;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    margin-left: 25px;
+    margin-left: 20px;
     font-weight: 300;
     transition: 0.3s;
+    font-size: 0.95rem;
 }
 
-nav a:hover {
+nav a:hover, nav a.active {
     color: #00d4ff;
 }
 
-
+/* Hero Section */
 .hero {
-    min-height: calc(100vh - 100px); /* fills screen minus header */
+    min-height: 60vh;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* vertical centering */
+    justify-content: center;
     align-items: center;
     text-align: center;
-    padding-top: 50px; /* ensures title isn't cut off */
-    padding-bottom: 50px; /* breathing room on shorter screens */
+    padding: 60px 20px;
     background: linear-gradient(135deg, #0a0f1c, #1a2a6c, #00d4ff);
 }
 
-.hero h1 {
-    font-size: 64px;
-    margin-bottom: 20px;
-}
+.hero h1 { font-size: 64px; margin-bottom: 20px; }
+.hero p { max-width: 700px; font-size: 1.1rem; opacity: 0.9; line-height: 1.6; }
 
-.hero p {
-    max-width: 600px;
-    font-size: 18px;
-    opacity: 0.9;
-}
-
-.button {
-    margin-top: 30px;
-    padding: 12px 25px;
-    background: #00d4ff;
-    color: black;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: 0.3s;
-}
-
-.button:hover {
-    background: white;
-}
-
-
+/* Containers & Cards */
 .container {
     max-width: 1100px;
     margin: auto;
-    padding: 80px 20px; /* spacing inside content */
+    padding: 60px 20px;
 }
 
-/* optional spacing after hero */
-main .container:first-of-type {
-    margin-top: 40px; /* prevents content from being too close to hero */
-}
+.section-title { text-align: center; margin-bottom: 40px; font-size: 32px; color: #00d4ff; }
 
-.section-title {
-    text-align: center;
-    margin-bottom: 50px;
-    font-size: 32px;
-}
-
-/* Cards */
 .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
 }
 
 .card {
     background: #11182c;
     padding: 30px;
     border-radius: 15px;
-    transition: 0.3s;
     border: 1px solid rgba(255,255,255,0.05);
+    transition: 0.3s;
 }
 
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 30px rgba(0,212,255,0.3);
+.card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,212,255,0.2); }
+
+/* Horizontal Team Layout */
+.team-card {
+    display: flex;
+    align-items: center;
+    background: #11182c;
+    border-radius: 20px;
+    padding: 40px;
+    margin-bottom: 40px;
+    gap: 40px;
+    border: 1px solid rgba(0,212,255,0.1);
 }
 
+.team-info { flex: 2; }
+.team-info h3 { font-size: 28px; margin-bottom: 5px; color: #00d4ff; }
+.role { font-weight: 600; color: #8892b0; margin-bottom: 15px; display: block; }
 
-footer {
-    text-align: center;
-    padding: 30px;
-    background: #05080f;
-    opacity: 0.7;
-    margin-top: auto; /* sticks footer to bottom if content is short */
+.team-photo { flex: 1; display: flex; justify-content: center; }
+.team-photo img {
+    width: 220px;
+    height: 220px;
+    border-radius: 20px;
+    object-fit: cover;
+    border: 2px solid #00d4ff;
+}
+
+/* Contact Form */
+.contact-form {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #1e293b;
+    background: #1e293b;
+    color: white;
+    font-family: inherit;
+}
+
+.button {
+    padding: 12px 25px;
+    background: #00d4ff;
+    color: #0f172a;
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.button:hover { background: white; }
+
+footer { text-align: center; padding: 40px; background: #05080f; opacity: 0.6; margin-top: auto; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .team-card { flex-direction: column; text-align: center; }
+    .team-photo { order: -1; }
+    .hero h1 { font-size: 40px; }
 }
