@@ -1,84 +1,43 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-
-<title>Contact | STEMBound</title>
-<link rel="icon" href="stembound-logo.png">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <title>Contact | STEMBound</title>
+    <link rel="icon" href="stembound-logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
 <header>
-<div class="navbar">
-<a href="index.html" class="logo">STEMBound</a>
-
-<nav>
+  <div class="navbar">
+    <a href="index.html" class="logo">STEMBound</a>
+    <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="events.html">Events</a>
       <a href="team.html">Our Team</a>
       <a href="chapters.html">Chapters</a>
       <a href="start-chapter.html">Start a Chapter</a>
-      <a href="contact.html">Contact</a>
+      <a href="contact.html" class="active">Contact</a>
     </nav>
-
-</div>
+  </div>
 </header>
 
-<section class="hero">
-
-<h1>Contact Us</h1>
-
-<p>
-Have questions about STEMBound, starting a chapter, or getting involved?
-Reach out and we'll get back to you!
-</p>
-
-</section>
-
-<section class="container">
-
-<h2 class="section-title">Get In Touch</h2>
-
-<div class="cards">
-
-<div class="card">
-<h3>Email</h3>
-<p>
-stemboundorg@gmail.com
-</p>
-</div>
-
-<div class="card">
-<h3>Instagram & TikTok</h3>
-<p>
-Follow us and message us at <br>
-<strong>@stembound_org</strong>
-</p>
-</div>
-
-<div class="card">
-<h3>Start a Chapter</h3>
-<p>
-Interested in bringing STEMBound to your school?
-Contact us to learn how to start a chapter.
-</p>
-</div>
-
-</div>
-
-</section>
-
-<footer>
-<p>© 2026 STEMBound Club</p>
-</footer>
-
-<script src="script.js"></script>
-
+<main>
+  <section class="container">
+    <h2 class="section-title">Get in Touch</h2>
+    <form class="contact-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email Address" required>
+        <textarea rows="6" placeholder="How can we help you?" required></textarea>
+        <button type="submit" class="button">Send Message</button>
+    </form>
+    
+    <div style="text-align: center; margin-top: 40px; opacity: 0.8;">
+        <p>Email: stemboundorg@gmail.com</p>
+        <p>Socials: @stembound_org</p>
+    </div>
+  </section>
+</main>
+<footer><p>© 2026 STEMBound Club</p></footer>
 </body>
 </html>
